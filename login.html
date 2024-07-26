@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<section>
+    <div class="login-container">
+        <h2>Super secret gifts👀</h2>
+		<p> Hint: Username is love and password is a special date :) </p>
+        <form action="https://www.google.com/" method="get" onsubmit="return validateForm()">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Validate the credentials
+            if (username.toLowerCase() !== "love" || password !== "230823") {
+                alert("Invalid username or password");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission to google.com
+        }
+    </script>
+</section>
+</body>
+</html>
